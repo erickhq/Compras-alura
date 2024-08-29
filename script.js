@@ -15,5 +15,18 @@ function adicionarItem(evento) {
     nomeDoItem.innerText = item.value;
     containerNomeDoItem.appendChild(nomeDoItem);
 
+    const containerBotoes = document.createElement("div");
+    const botaoRemover = document.createElement("buttom");
+    botaoRemover.classList.add("item-lista-buttom")
+
+    const imagemRemover = document.createElement("img");
+    imagemRemover.src = "img/delete.svg";
+    imagemRemover.alt = "Remover";
+
+    botaoRemover.appendChild(imagemRemover);
+    containerBotoes.appendChild(botaoRemover);
+
+    containerItemLista.appendChild(containerNomeDoItem);
+    containerItemLista.appendChild(containerBotoes);
     itemDaLista.appendChild(containerItemLista);
 }
